@@ -1,0 +1,96 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{imakeidx}
+\usepackage{hyperref}
+\usepackage{mdframed}
+\usepackage{float}
+\usepackage{minted}
+\usepackage{xcolor}
+\usepackage{ntheorem}
+\makeindex
+\hypersetup{
+colorlinks,
+linkcolor=blue,
+urlcolor=blue,}
+
+%minted config colors to make more pretty code blocks
+\definecolor{lightgray}{gray}{0.9}
+\setminted {
+bgcolor=lightgray,
+%this setting makes line breaks happen idk ahow i feel about it 
+breaklines
+}
+
+
+\title{Git for Robots}   
+\author{Arjun Gandhi} 
+\date{\today} 
+
+\begin{document}
+
+\definecolor{defcolor}{HTML}{F4CCCC}
+\definecolor{concolor}{HTML}{D9EAD3}
+\definecolor{goldcolor}{HTML}{FFF2CC}
+\definecolor{ncolor}{HTML}{C9DAF8}
+
+%theroms definitions with styling
+\newtheorem*{defi}{Definition}
+\newenvironment{definition}%
+  {\begin{mdframed}[backgroundcolor=defcolor]\begin{defi}}%
+  {\end{defi}\end{mdframed}}
+\newtheorem*{conce}{Concept}
+\newenvironment{concept}%
+  {\begin{mdframed}[backgroundcolor=concolor]\begin{conce}}%
+  {\end{conce}\end{mdframed}}
+\newtheorem{gold}{Golden Rule}
+\newenvironment{golden-rule}%
+  {\begin{mdframed}[backgroundcolor=goldcolor]\begin{gold}}%
+  {\end{gold}\end{mdframed}}
+  
+\newtheorem*{n}{Note}
+\newenvironment{note}%
+  {\begin{mdframed}[backgroundcolor=ncolor]\begin{n}}%
+  {\end{n}\end{mdframed}}
+  
+%=========================================
+\begin{titlepage}
+		\centering{
+			{\fontsize{40}{48}\selectfont 
+			The 3002 Startup Guide}
+		}\\
+			
+		\vspace{10mm}
+		\centering{\Large{Arjun Gandhi}}\\
+		\vspace{\fill}
+		\centering \large{March 2020}
+\end{titlepage}
+
+
+%=========================================
+\newpage{}
+\thispagestyle {empty}
+
+\vspace*{2cm}
+
+\begin{figure}
+    \centering
+	\includegraphics[width=5.5in]{images/wanna_see_the_code.png}
+	\caption{This is how all of my robotics project go.}
+\end{figure}
+
+\newpage
+{
+\hypersetup{
+linkcolor=black,
+urlcolor=black,}
+
+\tableofcontents
+
+}
+
+\newpage
+\section{What is version control?}
+
+\end{document}
